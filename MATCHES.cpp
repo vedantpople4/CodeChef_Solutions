@@ -1,39 +1,25 @@
-#include <bits/stdc++.h>
-#define ll long long int
-#define db double
-#define pb push_back
-#define mpr make_pair
-#define andl "\n"
-#define f first
-#define s second
-#define mset(x,y) memset(x,y,sizeof(x))
-#define fr(i,h,n) for(long long int i=h;i<n;i++)
-#define trace(it,x) for(auto it = (x).begin(); it != (x).end(); it++)
-#define mod 1000000007
-#define fastio ios::sync_with_stdio (false); cin.tie (0); cout.tie (0);
-#define runtime cerr<< '\n' << "Time elapsed :" << clock() * 1000.0 / CLOCKS_PER_SEC << " ms\n" ;
+#include<bits/stdc++.h>
 using namespace std;
-     
-       
+
 int main()
 {
-    	fastio
-    	ll t;
-    	cin>>t;
-    	vector<int>v={6,2,5,5,4,5,6,3,7,6};
-		while(t-->0){
+	int t;
+	cin>>t;
+	int arr[10] = {6,2,5,5,4,5,6,3,7,6};
+	int sum = 0;
+	while(t--){
 		int a,b;
 		cin>>a>>b;
-		int sum=a+b,ans=0;
-		while(sum>0){
-			ans+=v[sum%10];
-			sum/=10;
+		int ans = a+b;
+		while(ans>0){
+			sum += arr[ans%10];
+			ans /= 10;	
 		}
-		cout<<ans<<endl;
+		cout<<sum<<endl;
+		sum = 0;
 	}
-    	
-    	runtime;
-    	
-    	
-    	
+	
+	
+	
+	return 0;
 }
